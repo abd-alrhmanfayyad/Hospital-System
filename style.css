@@ -82,6 +82,12 @@ header a{
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 16px;
 }
+.empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 30px;
+    color: var(--primary);
+}
 
 .card img {
     width: 100%;
