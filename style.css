@@ -1,0 +1,114 @@
+:root {
+    --primary-dark: #0C447C;
+    --primary: #185FA5;
+    --bg: #E6F1FB;
+    --text: #042C53;
+    --card: #FFFFFF;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    
+}
+main{
+    padding: 15PX;
+}
+#patient-form {
+
+    background-color: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+
+        display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+#register {
+    max-width: 500px;
+    margin: auto;
+}
+#patient-form > input,
+#patient-form > select ,
+#patient-form > fieldset
+{
+    padding:10PX ;
+    border: 1PX var(--primary) solid;
+    border-radius: 15px;
+    font: inherit;
+}
+#patient-form > button {
+    background-color: var(--primary);
+    color: var(--card);
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    font: inherit;
+    cursor: pointer;
+}
+
+#patient-form > button:hover {
+    background-color: var(--primary-dark);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 15px;
+    background-color:var(--primary-dark);
+    color: var(--card);
+}
+
+header a{
+    color: var(--bg);
+    text-decoration: none;
+    margin: 0 12px;
+}
+
+#patients{
+    margin-top: 50px;
+}
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
+.card {
+    background-color: var(--card);
+    padding: 10px;
+    border-radius: 15px;
+}
+footer {
+    background-color: var(--primary-dark);
+    color: var(--card);
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+}
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 16px 40px;
+    }
+
+    nav a {
+        margin: 0 0 0 24px;
+    }
+
+}
