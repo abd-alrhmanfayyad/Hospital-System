@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,69 @@
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
 </head>
+
 <body>
+
+  <header>
+    <h1>City Hospital</h1>
+    <nav>
+     <a href="#">Home</a>
+        <a href="#">Patients</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      
+    </nav>
+  </header>
+
+  <main>
+    <section id="register">
+      <h2>Register a patient</h2>
+      <form id="patient-form">
+        <label for="fullName">Full name</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="dateOfBirth">Date of birth</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+
+        <fieldset>
+          <legend>Gender</legend>
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+        </fieldset>
+
+        <label for="phoneNumber">Phone number</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="07XXXXXXXX" pattern="07[789][0-9]{7}" maxlength="10"
+          required>
+
+        <label for="chronicDiseases">Chronic diseases</label>
+        <select id="chronicDiseases" name="chronicDiseases" required>
+          <option value="">Choose one</option>
+          <option value="Heart Disease">Heart Disease</option>
+          <option value="Hypertension">Hypertension</option>
+          <option value="Asthma">Asthma</option>
+          <option value="Cancer">Cancer</option>
+          <option value="No">No</option>
+        </select>
+
+        <button type="submit">Add patient</button>
+      </form>
+    </section>
+
+    <section id="patients">
+      <h2>Patients</h2>
+      <div id="cards"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 City Hospital. All rights reserved.</p>
+  </footer>
+
 </body>
+
 </html>
